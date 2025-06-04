@@ -7,9 +7,29 @@
   </head>
   <body>
     <h1>Weather</h1>
-    <div id="output">
+
+    <!-- form for user to put in zipcode -->
+    <label for="zipcode">Enter ZIP code:</label>
+    <input type="text" id="zipcode" maxlength="5" placeholder="#####" />
+    <button id="button-fetch">Get Weather</button>
+
+    <!-- Let user click on temp or sunrise/sunset to show them the details -->
+    <nav style="display: none" id="nav">
+      <button id="button-temp">Temperature</button>
+      <button id="button-sun">Sunrise/Sunset</button>
+    </nav>
+
+    <!-- <div id="output">
       <p id="location">Loading...</p>
       <p id="temp">Loading...</p>
+      <p id="sunrise"></p>
+      <p id="sunset"></p>
+    </div> -->
+
+    <!-- When fetching for the api data, it shows here   -->
+    <div id="output">
+      <p id="status"></p>
+      <p id="temp"></p>
       <p id="sunrise"></p>
       <p id="sunset"></p>
     </div>
